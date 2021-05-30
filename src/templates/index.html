@@ -1,0 +1,28 @@
+{% extends 'base/base.html'%}
+{% load static %}
+{% block content%}
+
+<img src="https://www.google.com/imgres?imgurl=https%3A%2F%2Fstorage.googleapis.com%2Fgd-wagtail-prod-assets%2Foriginal_images%2Fevolving_google_identity_2x1.jpg&imgrefurl=https%3A%2F%2Fdesign.google%2Flibrary%2Fevolving-google-identity%2F&tbnid=UtqmH5kH0Oy8LM&vet=12ahUKEwiapOSyn_DwAhU5sUsFHV8nCOEQMygBegUIARDVAQ..i&docid=4aQ0r7NfC0dsEM&w=2432&h=1216&q=google&client=ubuntu&ved=2ahUKEwiapOSyn_DwAhU5sUsFHV8nCOEQMygBegUIARDVAQ" alt="">
+
+<h1>this is </h1>
+<a href="https://www.qries.com/">
+    <img alt="Qries" src="https://www.qries.com/images/banner_logo.png"
+    width=150" height="70">
+
+page{{data.page}}per_page{{data.per_page}}<br>
+{% for a in data.photos%}
+<!-- {{a.src}} -->
+
+<a href="https://www.qries.com/">
+    <!-- tiny landscape portrait small medium largelarge2x -->
+    <img alt="Qries" src="{{a.src.medium}}"
+    width=500" height="500">
+
+{%endfor%}
+
+{% endblock%}
+
+{% block javascript%}
+<script src="{% static 'index.js' %}" type="text/javascript" ></script>
+
+{% endblock%}
