@@ -1,0 +1,36 @@
+{% extends 'base/base.html'%}
+{% load static %}
+{% load bootstrap4 %}
+
+{% block content%}
+<div class="card">
+    <div class="card-body">
+        <h4 class="card-title"> {{data.photographer}}</h4>
+        <p class="card-text">
+            {{data.photographer_url}}
+            {{data.photographer_id}}
+            {{data.avg_color}}
+        </p>
+        <!-- <a href="    {{data.url}}    " class="btn btn-primary">Go somewhere</a> -->
+    </div>
+</div>
+
+
+<!-- 
+{{data.id}}
+{{data.width}}
+{{data.height}}
+{{data.url}}
+
+{{data.photographer}}
+{{data.photographer_url}}
+{{data.photographer_id}}
+{{data.avg_color}} -->
+
+<!-- {{data.src}} -->
+<img class="" src="{{data.src.large}}"  alt="">
+<!-- <div class="card-body"> Some more card content </div> -->
+
+
+
+{% endblock%}

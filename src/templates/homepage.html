@@ -1,0 +1,61 @@
+{% extends 'base/base.html'%} {% load static %} {% block content%}
+
+<style></style>
+<h1>welocme</h1>
+<div class="card">
+    <form class="d-flex">
+        <input class="form-control me-2" type="search" id='idsearch' name="search" placeholder="Search"
+            aria-label="Search" />
+        <button class="btn btn-outline-success" id='btnsearch' type="submit">Search</button>
+    </form>
+</div>
+<div class=" container" id='aa'>
+</div>
+<div id='lab'></div>
+
+
+<div class="tests">
+    <div class="row " id='iaa'>
+        {% for a in data.photos%}
+        <div class="col-3">
+
+            <div class="card-group" id='ida'>
+
+                <a href="#" id="is-valid" name='q' value="{{a.id}}">
+                    <img src="{{a.src.large}}" alt="" sizes="" srcset="">
+                </a>
+
+                <br>
+
+
+            </div>
+            <!-- <div class="row">
+                <div class="col-">
+                    <div class="form-group">
+                        <select class="selectpicker form-control" id="phid" name='photoid'>
+                            <option value="{{a.src.original}}">original</option>
+                            <option value="{{a.src.large2x}}">large2x</option>
+                            <option value="{{a.src.large}}">large</option>
+                            <option value="{{a.src.medium}}">medium</option>
+                            <option value="{{a.src.small}}">small</option>
+                            <option value="{{a.src.portrait}}">portrait</option>
+                            <option value="{{a.src.landscape}}">landscape</option>
+                            <option value="{{a.src.tiny}}">tiny</option>
+
+                        </select>
+                    </div>
+                </div>
+            </div> -->
+
+        </div>
+        {%endfor%}
+    </div>
+
+</div>
+
+
+{% endblock %} {% block javascript%}
+
+<script src="{% static 'js/inde.js' %}"></script>
+
+{% endblock%}
