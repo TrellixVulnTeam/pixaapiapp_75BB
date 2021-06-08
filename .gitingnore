@@ -1,0 +1,7 @@
+**/logs
+**/logs/debug.log
+**/vscode
+**/bin
+**/include
+**/lib
+**/lib64
